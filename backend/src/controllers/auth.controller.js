@@ -36,7 +36,7 @@ export const register = asyncHandler(async (req, res, next) => {
     res,
     201,
     {
-      _id: user._id,
+      _id: user._id.toString(),
       username: user.username,
       email: user.email,
       token,
@@ -60,7 +60,7 @@ export const login = asyncHandler(async (req, res, next) => {
     res,
     200,
     {
-      _id: user._id,
+      _id: user._id.toString(),
       username: user.username,
       email: user.email,
       token,
